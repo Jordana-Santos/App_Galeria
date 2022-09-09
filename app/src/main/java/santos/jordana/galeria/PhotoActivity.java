@@ -26,7 +26,7 @@ public class PhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
 
-        Toolbar toolbar = findViewById(R.id.tbMain);
+        Toolbar toolbar = findViewById(R.id.tbPhoto);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
@@ -59,7 +59,7 @@ public class PhotoActivity extends AppCompatActivity {
 
     void sharePhoto() {
         // Codigo para cpmpartiilhar a foto
-        Uri photoUri = FileProvider.getUriForFile(PhotoActivity.this, "trindade.galeria.fileprovider", new File(photoPath));
+        Uri photoUri = FileProvider.getUriForFile(PhotoActivity.this, "santos.jordana.galeria.fileprovider", new File(photoPath));
         Intent i = new Intent(Intent.ACTION_SEND);
         i.putExtra(Intent.EXTRA_STREAM, photoUri);
         i.setType("image/jpeg");

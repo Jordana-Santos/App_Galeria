@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         currentPhotoPath = f.getAbsolutePath();
 
         if (f != null) {
-            Uri fUri = FileProvider.getUriForFile(MainActivity.this, "trindade.daniel.galeria.fileprovider", f);
+            Uri fUri = FileProvider.getUriForFile(MainActivity.this, "santos.jordana.galeria.fileprovider", f);
             Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             i.putExtra(MediaStore.EXTRA_OUTPUT, fUri);
             startActivityForResult(i, RESULT_TAKE_PICTURE);
